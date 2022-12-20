@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
+
+namespace Dictionary_pro
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<string,string>dirt=new Dictionary<string,string>();
+            dirt.Add("Mango","Amm");
+            dirt.Add("Apple" ,"Saib");
+            dirt.Add("Banana", "Kela");
+            dirt.Add("Grapes", "Angoor");
+            dirt.Add("Peach" ,"Aru");
+            dirt.Add("Pine Apple","Ananas");
+            dirt.Add("Pear" ," Pear");
+            dirt.Add("Stawberry","Astabary");
+            dirt.Add("Orange" ,"Malta");
+            dirt.Add("Water Melon","Tarbooz");
+            Console.WriteLine("Enter Fruit Names");
+            var word = Console.ReadLine();                                 
+
+            foreach (var item in dirt) 
+            {
+                string key=item.Key;
+                string value=item.Value;
+                if(word==key) 
+                {
+                    Console.WriteLine($"{word} Urdu Names of Fruit is {value}");
+                }
+            }
+        }
+    } 
+}
